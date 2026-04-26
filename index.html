@@ -1,0 +1,143 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>VELASCO STUDIO</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+    }
+
+    /* Barra superior */
+    .topbar {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      align-items: center;
+    }
+
+    /* Logo */
+    .logo {
+      font-family: 'Helvetica Neue', sans-serif;
+      letter-spacing: 4px;
+      font-weight: 500;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    /* Banner */
+    .banner {
+      height: 300px;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 50px;
+    }
+
+    .banner h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .banner p {
+      font-size: 18px;
+    }
+
+    /* Productos */
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .producto {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .precio {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topbar">
+  🔥 ENVÍOS GRATIS EN TODA LA CIUDAD 🔥
+</div>
+
+<header>
+  <h2 class="logo">VELASCO STUDIO</h2>
+  <nav>
+    <a href="hombre.html">Hombre</a>
+    <a href="#">Mujer</a>
+    <a href="#">Nuevo</a>
+  </nav>
+</header>
+
+<section class="banner">
+  <h1>NUEVA COLECCIÓN</h1>
+  <p>Polos, hoodies y zapatillas exclusivas</p>
+</section>
+
+<section class="productos">
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/300">
+    <p>Polos</p>
+    <p class="precio">S/ 89</p>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/300">
+    <p>Hoodies</p>
+    <p class="precio">S/ 150</p>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/300">
+    <p>Zapatillas</p>
+    <p class="precio">S/ 180</p>
+  </div>
+
+</section>
+
+</body>
+</html>
