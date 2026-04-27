@@ -1,71 +1,96 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>VELASCO STUDIO</title>
+  <meta name="description" content="Ropa urbana inspirada en marcas premium. Polos, hoodies y shorts con estilo moderno, calidad top y precios accesibles.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Street-Cred | Estilo premium accesible</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f8f8f8;
+      color: #111;
     }
 
-    /* Barra superior */
     .topbar {
-      background: black;
+      background: #000;
       color: white;
       text-align: center;
       padding: 10px;
       font-size: 14px;
+      letter-spacing: 1px;
     }
 
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
-      padding: 20px 40px;
+      align-items: center;
+      padding: 22px 45px;
       background: white;
       border-bottom: 1px solid #eee;
-      align-items: center;
     }
 
-    /* Logo */
     .logo {
-      font-family: 'Helvetica Neue', sans-serif;
-      letter-spacing: 4px;
-      font-weight: 500;
-      font-size: 22px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      letter-spacing: 5px;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin: 0;
     }
 
     nav a {
-      margin: 0 15px;
+      margin-left: 25px;
       text-decoration: none;
       color: black;
       font-weight: 500;
+      font-size: 15px;
     }
 
-    /* Banner */
+    nav a:hover {
+      border-bottom: 1px solid black;
+    }
+
     .banner {
-      height: 300px;
-      background: black;
+      height: 360px;
+      background: #111;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 50px;
+      padding-left: 60px;
     }
 
     .banner h1 {
-      font-size: 40px;
+      font-size: 48px;
       margin: 0;
+      letter-spacing: 2px;
     }
 
     .banner p {
-      font-size: 18px;
+      font-size: 19px;
+      margin-top: 12px;
+      color: #ddd;
     }
 
-    /* Productos */
+    .intro {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .intro h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #555;
+      font-size: 16px;
+    }
+
     .productos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -76,8 +101,14 @@
     .producto {
       background: white;
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
+      transition: 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
     .producto img {
@@ -85,59 +116,98 @@
       border-radius: 10px;
     }
 
-    .precio {
-      font-weight: bold;
-      margin-top: 5px;
+    .producto p {
+      margin: 10px 0 5px;
     }
 
-    .producto:hover {
-      transform: translateY(-5px);
-      transition: 0.3s;
+    .precio {
+      font-weight: bold;
+      color: #111;
+    }
+
+    .footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .banner {
+        padding-left: 25px;
+        height: 280px;
+      }
+
+      .banner h1 {
+        font-size: 34px;
+      }
+
+      .productos {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  🔥 ENVÍOS GRATIS EN TODA LA CIUDAD 🔥
-</div>
-
-<header>
-  <h2 class="logo">VELASCO STUDIO</h2>
-  <nav>
-  <a href="hombre.html">Hombre</a>
-  <a href="#">Nuevo</a>
-  <a href="#">Colección</a>
-</nav>
-</header>
-
-<section class="banner">
-  <h1>NUEVA COLECCIÓN</h1>
-  <p>Ropa exclusiva para hombre</p>
-</section>
-
-<section class="productos">
-
-  <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Polos</p>
-    <p class="precio">S/ 89</p>
+  <div class="topbar">
+    ESTILO PREMIUM · CALIDAD ACCESIBLE
   </div>
 
-  <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Hoodies</p>
-    <p class="precio">S/ 150</p>
-  </div>
+  <header>
+    <h2 class="logo">Street-Cred</h2>
 
-  <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Shorts</p>
-    <p class="precio">S/ 180</p>
-  </div>
+    <nav>
+      <a href="hombre.html">Hombre</a>
+      <a href="#">Nuevo</a>
+      <a href="#">Colección</a>
+    </nav>
+  </header>
 
-</section>
+  <section class="banner">
+    <h1>NUEVA COLECCIÓN</h1>
+    <p>Inspirado en marcas, hecho para tu estilo</p>
+  </section>
+
+  <section class="intro">
+    <h2>Ropa urbana para hombre</h2>
+    <p>Polos, hoodies y shorts con estilo moderno, calidad top y precios accesibles.</p>
+  </section>
+
+  <section class="productos">
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <p>Polos</p>
+      <p class="precio">Desde S/ 89</p>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <p>Hoodies</p>
+      <p class="precio">Desde S/ 150</p>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <p>Shorts</p>
+      <p class="precio">Desde S/ 120</p>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    © 2026 Street-Cred · Ropa urbana premium accesible
+  </footer>
 
 </body>
 </html>
