@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hombre</title>
+  <title>Hombre | Street-Cred</title>
 
   <style>
     body {
@@ -12,27 +12,51 @@
     }
 
     header {
-      padding: 20px;
+      padding: 20px 40px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      font-weight: bold;
+    }
+
+    .categorias {
+      display: flex;
+      gap: 20px;
+      padding: 20px 40px;
       background: white;
       border-bottom: 1px solid #eee;
     }
 
+    .categorias div {
+      cursor: pointer;
+      font-weight: 500;
+    }
+
     .productos {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 40px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 30px;
     }
 
     .producto {
       background: white;
-      padding: 15px;
-      text-align: center;
+      padding: 10px;
       border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
     }
 
     img {
       width: 100%;
+      border-radius: 10px;
+    }
+
+    .precio {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -40,21 +64,43 @@
 <body>
 
 <header>
-  <h2>Ropa para Hombre</h2>
+  Street-Cred / Hombre
 </header>
+
+<div class="categorias">
+  <div>Polos</div>
+  <div>Hoodies</div>
+  <div>Shorts</div>
+  <div>Joggers</div>
+</div>
 
 <section class="productos">
 
   <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Polo Urbano</p>
-    <p>S/ 80</p>
+    <a href="producto.html">
+      <img src="https://via.placeholder.com/300">
+      <p>Polo urbano</p>
+    </a>
+    <p class="precio">S/ 80</p>
   </div>
 
-  <a href="producto.html">
-  <img src="https://via.placeholder.com/300">
-  <p>Hoodie Street</p>
-</a>
+  <div class="producto">
+    <img src="https://via.placeholder.com/300">
+    <p>Hoodie street</p>
+    <p class="precio">S/ 150</p>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/300">
+    <p>Shorts básicos</p>
+    <p class="precio">S/ 120</p>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/300">
+    <p>Jogger premium</p>
+    <p class="precio">S/ 140</p>
+  </div>
 
 </section>
 
