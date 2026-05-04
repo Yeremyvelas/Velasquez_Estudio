@@ -2,107 +2,248 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hombre | Street-Cred</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hombre | WEAR HUB</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial;
-      background: #f8f8f8;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #111;
+    }
+
+    .topbar {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      letter-spacing: 1px;
     }
 
     header {
-      padding: 20px 40px;
       background: white;
+      padding: 22px 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       border-bottom: 1px solid #eee;
-      font-weight: bold;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 5px;
+      font-weight: 700;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin-left: 25px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      border-bottom: 1px solid black;
+    }
+
+    .titulo {
+      text-align: center;
+      padding: 45px 20px 20px;
+    }
+
+    .titulo h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .titulo p {
+      color: #555;
+      font-size: 16px;
     }
 
     .categorias {
       display: flex;
-      gap: 20px;
-      padding: 20px 40px;
-      background: white;
-      border-bottom: 1px solid #eee;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 10px 20px 30px;
     }
 
-    .categorias div {
-      cursor: pointer;
+    .categorias span {
+      background: white;
+      padding: 12px 22px;
+      border-radius: 30px;
       font-weight: 500;
+      border: 1px solid #ddd;
     }
 
     .productos {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 25px;
-      padding: 30px;
+      padding: 30px 40px 50px;
     }
 
     .producto {
       background: white;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 15px;
+      border-radius: 12px;
       text-align: center;
       transition: 0.3s;
     }
 
     .producto:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
-    img {
+    .producto img {
       width: 100%;
       border-radius: 10px;
     }
 
+    .producto h3 {
+      font-size: 17px;
+      margin: 14px 0 6px;
+    }
+
     .precio {
       font-weight: bold;
+      font-size: 18px;
+      margin: 6px 0;
+    }
+
+    .tallas {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .boton {
+      display: inline-block;
+      background: black;
+      color: white;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .boton:hover {
+      background: #333;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .productos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .titulo h1 {
+        font-size: 30px;
+      }
+
+      .productos {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  Street-Cred / Hombre
-</header>
+  <div class="topbar">
+    CATÁLOGO HOMBRE · TALLAS S A XL · PRECIOS DESDE S/ 99.90
+  </div>
 
-<div class="categorias">
-  <div>Polos</div>
-  <div>Hoodies</div>
-  <div>Shorts</div>
-  <div>Joggers</div>
-</div>
+  <header>
+    <h2 class="logo">WEAR HUB</h2>
 
-<section class="productos">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="hombre.html">Hombre</a>
+      <a href="#">Marcas</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
 
-  <div class="producto">
-    <a href="producto.html">
+  <section class="titulo">
+    <h1>Hombre</h1>
+    <p>Prendas seleccionadas para hombre con tallas disponibles desde S hasta XL.</p>
+  </section>
+
+  <section class="categorias">
+    <span>Polos</span>
+    <span>Hoodies</span>
+    <span>Pantalones</span>
+    <span>Shorts</span>
+    <span>Zapatillas</span>
+  </section>
+
+  <section class="productos">
+
+    <div class="producto">
       <img src="https://via.placeholder.com/300">
-      <p>Polo urbano</p>
-    </a>
-    <p class="precio">S/ 80</p>
-  </div>
+      <h3>Polo de marca</h3>
+      <p class="precio">S/ 99.90</p>
+      <p class="tallas">Tallas: S · M · L · XL</p>
+      <a class="boton" href="producto.html">Ver producto</a>
+    </div>
 
-  <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Hoodie street</p>
-    <p class="precio">S/ 150</p>
-  </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <h3>Hoodie urbano</h3>
+      <p class="precio">S/ 99.90</p>
+      <p class="tallas">Tallas: S · M · L · XL</p>
+      <a class="boton" href="producto.html">Ver producto</a>
+    </div>
 
-  <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Shorts básicos</p>
-    <p class="precio">S/ 120</p>
-  </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <h3>Pantalón casual</h3>
+      <p class="precio">S/ 99.90</p>
+      <p class="tallas">Tallas: S · M · L · XL</p>
+      <a class="boton" href="producto.html">Ver producto</a>
+    </div>
 
-  <div class="producto">
-    <img src="https://via.placeholder.com/300">
-    <p>Jogger premium</p>
-    <p class="precio">S/ 140</p>
-  </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <h3>Short seleccionado</h3>
+      <p class="precio">S/ 99.90</p>
+      <p class="tallas">Tallas: S · M · L · XL</p>
+      <a class="boton" href="producto.html">Ver producto</a>
+    </div>
 
-</section>
+  </section>
+
+  <footer>
+    © 2026 WEAR HUB · Catálogo hombre
+  </footer>
 
 </body>
 </html>
