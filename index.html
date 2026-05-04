@@ -2,16 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Ropa urbana inspirada en marcas premium. Polos, hoodies y shorts con estilo moderno, calidad top y precios accesibles.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Street-Cred | Estilo premium accesible</title>
+  <title>WEAR HUB | Ropa de marca</title>
+
+  <meta name="description" content="Tienda online de ropa de marca. Encuentra polos, hoodies, pantalones, shorts y zapatillas seleccionadas en un solo lugar.">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      background: #f7f7f7;
       color: #111;
     }
 
@@ -25,29 +26,27 @@
     }
 
     header {
+      background: white;
+      padding: 22px 45px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 45px;
-      background: white;
       border-bottom: 1px solid #eee;
     }
 
     .logo {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      font-size: 24px;
       letter-spacing: 5px;
       font-weight: 700;
-      font-size: 24px;
-      text-transform: uppercase;
-      margin: 0;
     }
 
     nav a {
-      margin-left: 25px;
       text-decoration: none;
       color: black;
-      font-weight: 500;
+      margin-left: 25px;
       font-size: 15px;
+      font-weight: 500;
     }
 
     nav a:hover {
@@ -72,30 +71,48 @@
 
     .banner p {
       font-size: 19px;
-      margin-top: 12px;
       color: #ddd;
+      margin-top: 12px;
     }
 
     .intro {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 45px 20px 15px;
     }
 
     .intro h2 {
-      font-size: 26px;
+      font-size: 27px;
       margin-bottom: 10px;
     }
 
     .intro p {
       color: #555;
       font-size: 16px;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .beneficios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 25px 40px;
+    }
+
+    .beneficio {
+      background: white;
+      padding: 22px;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 15px;
     }
 
     .productos {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 40px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 35px 40px;
     }
 
     .producto {
@@ -117,20 +134,22 @@
     }
 
     .producto p {
-      margin: 10px 0 5px;
+      margin: 12px 0 4px;
+      font-weight: 500;
     }
 
-    .precio {
-      font-weight: bold;
-      color: #111;
+    .nota {
+      text-align: center;
+      padding: 20px 40px 45px;
+      color: #555;
+      font-size: 15px;
     }
 
-    .footer {
+    footer {
       background: #111;
       color: white;
       text-align: center;
       padding: 25px;
-      margin-top: 30px;
       font-size: 14px;
     }
 
@@ -138,17 +157,23 @@
       header {
         flex-direction: column;
         gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 0 8px;
       }
 
       .banner {
-        padding-left: 25px;
         height: 280px;
+        padding: 25px;
       }
 
       .banner h1 {
         font-size: 34px;
       }
 
+      .beneficios,
       .productos {
         grid-template-columns: 1fr;
         padding: 25px;
@@ -160,27 +185,37 @@
 <body>
 
   <div class="topbar">
-    ESTILO PREMIUM · CALIDAD ACCESIBLE
+    PRENDAS SELECCIONADAS · VARIEDAD DE MARCAS · ATENCIÓN PERSONALIZADA
   </div>
 
   <header>
-    <h2 class="logo">Street-Cred</h2>
+    <h2 class="logo">WEAR HUB</h2>
 
     <nav>
       <a href="hombre.html">Hombre</a>
       <a href="#">Nuevo</a>
-      <a href="#">Colección</a>
+      <a href="#">Marcas</a>
+      <a href="#">Contacto</a>
     </nav>
   </header>
 
   <section class="banner">
-    <h1>NUEVA COLECCIÓN</h1>
-    <p>Inspirado en marcas, hecho para tu estilo</p>
+    <h1>ROPA DE MARCA EN UN SOLO LUGAR</h1>
+    <p>Selección de prendas y zapatillas para hombre con estilo, variedad y buenos precios.</p>
   </section>
 
   <section class="intro">
-    <h2>Ropa urbana para hombre</h2>
-    <p>Polos, hoodies y shorts con estilo moderno, calidad top y precios accesibles.</p>
+    <h2>Catálogo seleccionado para tu estilo</h2>
+    <p>
+      En WEAR HUB reunimos prendas de diferentes proveedores para ofrecerte variedad en ropa de marca,
+      desde polos y hoodies hasta pantalones, shorts y zapatillas.
+    </p>
+  </section>
+
+  <section class="beneficios">
+    <div class="beneficio">🛍️ Prendas seleccionadas</div>
+    <div class="beneficio">👕 Variedad de estilos</div>
+    <div class="beneficio">📲 Atención directa</div>
   </section>
 
   <section class="productos">
@@ -188,25 +223,31 @@
     <div class="producto">
       <img src="https://via.placeholder.com/300">
       <p>Polos</p>
-      <p class="precio">Desde S/ 89</p>
     </div>
 
     <div class="producto">
       <img src="https://via.placeholder.com/300">
       <p>Hoodies</p>
-      <p class="precio">Desde S/ 150</p>
     </div>
 
     <div class="producto">
       <img src="https://via.placeholder.com/300">
-      <p>Shorts</p>
-      <p class="precio">Desde S/ 120</p>
+      <p>Pantalones</p>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300">
+      <p>Zapatillas</p>
     </div>
 
   </section>
 
-  <footer class="footer">
-    © 2026 Street-Cred · Ropa urbana premium accesible
+  <p class="nota">
+    Próximamente agregaremos productos reales con fotos, tallas disponibles y precios actualizados.
+  </p>
+
+  <footer>
+    © 2026 WEAR HUB · Tienda online de ropa seleccionada
   </footer>
 
 </body>
