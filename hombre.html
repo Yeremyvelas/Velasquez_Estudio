@@ -172,6 +172,33 @@
         padding: 25px;
       }
     }
+    .imagen-hover {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.imagen-hover img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+.img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.imagen-hover:hover .img-hover {
+  opacity: 1;
+}
+
+.imagen-hover:hover .img-normal {
+  opacity: 0;
+}
   </style>
 </head>
 
@@ -216,12 +243,18 @@
     </div>
 
     <div class="producto">
-      <img src="https://via.placeholder.com/300">
-      <h3>Hoodie urbano</h3>
-      <p class="precio">S/ 99.90</p>
-      <p class="tallas">Tallas: S · M · L · XL</p>
-      <a class="boton" href="producto.html">Ver producto</a>
-    </div>
+
+  <div class="imagen-hover">
+    <img class="img-normal" src="img/casaca-1.jpg" alt="Casaca">
+    <img class="img-hover" src="img/casaca-2.jpg" alt="Casaca puesta">
+  </div>
+
+  <h3>Casaca seleccionada</h3>
+  <p class="precio">S/ 99.90</p>
+  <p class="tallas">Tallas: S · M · L · XL</p>
+  <a class="boton" href="producto.html">Ver producto</a>
+
+</div>
 
     <div class="producto">
       <img src="https://via.placeholder.com/300">
